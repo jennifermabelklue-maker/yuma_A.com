@@ -1,10 +1,3 @@
-"""
-app.py
-Entry point for Recipe Time.
-Run with: streamlit run app.py
-100% free stack: Streamlit (UI) + SQLite (storage) - no paid services required.
-"""
-
 import streamlit as st
 
 from services.db import init_db
