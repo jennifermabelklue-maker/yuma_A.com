@@ -8,10 +8,11 @@ no paid auth provider needed.
 import hashlib
 import os
 import re
+from typing import Optional
 from services.db import get_connection
 
 
-def _hash_password(password: str, salt: str = None) -> str:
+def _hash_password(password: str, salt: Optional[str] = None) -> str:
     if salt is None:
         salt = os.urandom(16).hex()
     pwd_hash = hashlib.sha256((salt + password).encode("utf-8")).hexdigest()
